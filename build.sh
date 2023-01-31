@@ -34,6 +34,7 @@ gpg -abs -u $GPG_KEY --clearsign -o $OUTPUT_DIR/InRelease $OUTPUT_DIR/Release
 
 echo "[*] Copying files..."
 cp -R pool "$OUTPUT_DIR"
+# shellcheck disable=SC2035
 cp *.png "$OUTPUT_DIR"
 cp index.html "$OUTPUT_DIR"
 
